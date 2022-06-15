@@ -37,13 +37,13 @@ export default {
   methods: {
     async fetchCovidData() {
       const res = await fetch('https://api.covid19api.com/summary');
+      console.log(res)
       return await res.json();
     },
 
     getSelectedCountryData(country) {
       this.stats = country;
       this.title = country.Country;
-      fetchCovidDataByDay(this.title);
     },
     numberWithSpaces(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
