@@ -8,8 +8,9 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: #e5eaee;
+  background: #041C32;
   position: relative;
+  color: white;
 }
 
 .container {
@@ -19,6 +20,16 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 380px);
+  justify-content: center;
+  align-content: center;
+  grid-template-rows: auto;
+  grid-gap:80px;
+  width: 100%;
 }
 @media (min-width: 576px) {
   .container {

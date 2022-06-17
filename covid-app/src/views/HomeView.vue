@@ -5,6 +5,7 @@
     <CountrySelect
       @get-country="getSelectedCountryData"
       :countries="countries"
+      :numberWithSpaces = "numberWithSpaces"
     />
     <AllCountries :countries="countries" :numberWithSpaces="numberWithSpaces" />
   </main>
@@ -16,6 +17,7 @@ import DataInfo from '@/components/DataInfo';
 import DataBoxes from '@/components/DataBoxes';
 import AllCountries from '@/components/AllCountries';
 import CountrySelect from '@/components/CountrySelect';
+import  '@/assets/global.scss';
 export default {
   name: 'HomeView',
   components: {
@@ -36,9 +38,14 @@ export default {
   },
   methods: {
     async fetchCovidData() {
+      try {
       const res = await fetch('https://api.covid19api.com/summary');
-      console.log(res)
       return await res.json();
+      }
+      catch(error){
+        throw(error)
+      }
+
     },
 
     getSelectedCountryData(country) {

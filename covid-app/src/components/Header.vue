@@ -13,9 +13,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .header {
-  width: 100vw;
-  background: pink;
+  width: 100%;
   padding: 20px;
-  box-sizing: border-box;
+  border-bottom: 1px solid white;
 }
 </style>

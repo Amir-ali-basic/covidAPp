@@ -1,6 +1,6 @@
 <template>
   <div class="title">
-    <h2>{{ text }}</h2>
+    <h1>{{ text }}</h1>
     <p>{{ timestamp }}</p>
   </div>
 </template>
@@ -18,3 +18,21 @@ export default {
   },
 };
 </script>
+<style lang ="scss">
+.title{
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  align-content:center;
+  flex-direction: column;
+    h1{
+      font-size:3rem;
+      margin-bottom:0;
+    }
+    p{
+      font-style: italic;
+    }
+}
+
+</style>

@@ -1,8 +1,11 @@
 <template>
+<div class="btn-container">
   <button v-on:click="sortByLowest()">Sortiraj najmanje ukupnih</button>
   <button v-on:click="sortByLargest()">Sortiraj najvise ukupnih</button>
   <button v-on:click="sortByAtoZ()">Sortiraj A-Z</button>
   <button v-on:click="sortByZtoA()">Sortiraj Z-A</button>
+</div>
+
 
   <table>
     <thead>
@@ -21,7 +24,7 @@
     </thead>
     <tbody>
       <tr v-for="country in countries" v-bind:key="country.id">
-        <td v-on:click="setName()" value="{{country.Country}}">
+        <td>
           {{ country.Country }}
         </td>
         <td>{{ numberWithSpaces(country.NewConfirmed) }}</td>
@@ -59,17 +62,30 @@ export default {
     sortByZtoA() {
       this.countries.sort((a, b) => b.Country.localeCompare(a.Country));
     },
-    setName(name) {
-      name = this.value;
-      console.log(name);
-    },
   },
 };
 </script>
 <style land="scss">
+table{
+  width: 100%;
+}
 table,
 tr,
 td {
-  border: 1px solid red;
+  border-bottom: 1px solid #fff;
+}
+.btn-container{
+  display: flex;
+  gap: 10px;
+  margin-top:15px;
+  margin-bottom:5px;
+}
+
+button{
+  height: 35px;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
 }
 </style>

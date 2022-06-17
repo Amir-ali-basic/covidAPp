@@ -1,13 +1,13 @@
 <template>
   <h1>{{ stats.title }}</h1>
-  <div class="grid">
+  <div class="cases">
     <div class="new-cases">
-      <p>New confirmed: {{ numberWithSpaces(stats.NewConfirmed) }}</p>
-      <p>Total confirmed: {{ numberWithSpaces(stats.TotalConfirmed) }}</p>
+      <p>Novi potvrdjeni: {{ numberWithSpaces(stats.NewConfirmed) }}</p>
+      <p>Ukupno potvrdjenih: {{ numberWithSpaces(stats.TotalConfirmed) }}</p>
     </div>
-    <div class="new-cases">
-      <p>NewDeaths: {{ numberWithSpaces(stats.NewDeaths) }}</p>
-      <p>TotalDeaths: {{ numberWithSpaces(stats.TotalDeaths) }}</p>
+    <div class="new-deadhs">
+      <p>Novi preminuli: {{ numberWithSpaces(stats.NewDeaths) }}</p>
+      <p>ukupno preminulih: {{ numberWithSpaces(stats.TotalDeaths) }}</p>
     </div>
   </div>
 </template>
@@ -18,17 +18,20 @@ export default {
 };
 </script>
 <style lang="scss">
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  grid-template-rows: auto;
-  justify-content: center;
-  width: 100%;
-  .new-cases {
-    background: pink;
-  }
-  .new-deadhs {
-    background: red;
-  }
+.cases {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    .new-cases {
+      background: #3D7051;
+      padding:15px;
+      width:310px;
+    }
+    .new-deadhs {
+      background: #821D3F;
+      padding:15px;
+      width:310px;
+    }
 }
 </style>
