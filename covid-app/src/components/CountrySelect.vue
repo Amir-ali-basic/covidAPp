@@ -3,6 +3,7 @@
   <select 
   @change="changeCountry"
    v-model="selected">
+    <option value="0">Odaberite zemlju</option>
     <option v-for="country in countries" :value="country.ID">
       {{ country.Country }}
     </option>
