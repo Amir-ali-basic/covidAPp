@@ -18,21 +18,20 @@ export default {
   },
 };
 </script>
-<style lang ="scss">
-.title{
+<style lang="scss">
+.title {
   width: 100%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  align-content:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   flex-direction: column;
-    h1{
-      font-size:3rem;
-      margin-bottom:0;
-    }
-    p{
-      font-style: italic;
-    }
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+  p {
+    font-style: italic;
+  }
 }
-
 </style>

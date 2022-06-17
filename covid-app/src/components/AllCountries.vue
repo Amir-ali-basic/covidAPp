@@ -1,11 +1,10 @@
 <template>
-<div class="btn-container">
-  <button v-on:click="sortByLowest()">Sortiraj najmanje ukupnih</button>
-  <button v-on:click="sortByLargest()">Sortiraj najvise ukupnih</button>
-  <button v-on:click="sortByAtoZ()">Sortiraj A-Z</button>
-  <button v-on:click="sortByZtoA()">Sortiraj Z-A</button>
-</div>
-
+  <div class="btn-container">
+    <button v-on:click="sortByLowest()">Sortiraj najmanje ukupnih</button>
+    <button v-on:click="sortByLargest()">Sortiraj najvise ukupnih</button>
+    <button v-on:click="sortByAtoZ()">Sortiraj A-Z</button>
+    <button v-on:click="sortByZtoA()">Sortiraj Z-A</button>
+  </div>
 
   <table>
     <thead>
@@ -66,7 +65,7 @@ export default {
 };
 </script>
 <style land="scss">
-table{
+table {
   width: 100%;
 }
 table,
@@ -74,14 +73,14 @@ tr,
 td {
   border-bottom: 1px solid #fff;
 }
-.btn-container{
+.btn-container {
   display: flex;
   gap: 10px;
-  margin-top:15px;
-  margin-bottom:5px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
-button{
+button {
   height: 35px;
   background: transparent;
   color: white;

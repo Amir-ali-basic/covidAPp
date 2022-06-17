@@ -19,19 +19,19 @@ export default {
 </script>
 <style lang="scss">
 .cases {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 10px;
-    .new-cases {
-      background: #3D7051;
-      padding:15px;
-      width:310px;
-    }
-    .new-deadhs {
-      background: #821D3F;
-      padding:15px;
-      width:310px;
-    }
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+  .new-cases {
+    background: #3d7051;
+    padding: 15px;
+    width: 310px;
+  }
+  .new-deadhs {
+    background: #821d3f;
+    padding: 15px;
+    width: 310px;
+  }
 }
 </style>
